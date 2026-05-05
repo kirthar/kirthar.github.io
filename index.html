@@ -50,7 +50,6 @@
 
     .narrative{font-size:1.05rem;color:var(--text-2);max-width:600px}.narrative+.narrative{margin-top:16px}
     .narrative strong{color:var(--text);font-weight:500}
-    .pull-quote{font-family:var(--serif);font-size:1.6rem;font-style:italic;color:var(--text);line-height:1.35;margin:36px 0;padding-left:20px;border-left:3px solid var(--accent);max-width:540px}
 
     .values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
     .value-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
@@ -58,10 +57,7 @@
     .value-title{font-weight:600;font-size:.92rem;color:var(--text);margin-bottom:6px}
     .value-desc{font-size:.85rem;color:var(--text-2);line-height:1.55}
 
-    .numbers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px}
-    .number-item{text-align:center;padding:24px 12px}
-    .number-big{font-family:var(--serif);font-size:2.8rem;color:var(--accent);line-height:1;margin-bottom:6px}
-    .number-label{font-size:.82rem;color:var(--text-3)}
+
 
     .timeline{list-style:none}
     .timeline li{position:relative;padding-left:28px;padding-bottom:28px}
@@ -75,14 +71,7 @@
     .tl-dates{font-size:.78rem;color:var(--text-3)}
     .tl-desc{font-size:.88rem;color:var(--text-2);margin-top:4px}
 
-    .projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .project-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:border-color .2s}
-    .project-card:hover{border-color:var(--accent)}
-    .project-tag{font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
-    .project-name{font-weight:600;font-size:1rem;color:var(--text);margin-bottom:6px}
-    .project-desc{font-size:.85rem;color:var(--text-2);line-height:1.55}
-    .project-stack{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
-    .project-stack span{font-size:.72rem;padding:3px 10px;border-radius:14px;background:var(--bg);color:var(--text-3)}
+
 
     .tech-groups{display:flex;flex-direction:column;gap:20px}
     .tech-group-label{font-size:.78rem;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
@@ -107,8 +96,7 @@
     @media(max-width:640px){
       .hero-photo{width:80px!important;height:80px!important;top:70px!important;right:20px!important}
       .hero-content{padding-bottom:48px}.hero h1{max-width:70%}
-      section{padding:56px 0}.numbers-grid{grid-template-columns:1fr 1fr}
-      .projects-grid{grid-template-columns:1fr}.pull-quote{font-size:1.3rem}
+      section{padding:56px 0}
       .values-grid{grid-template-columns:1fr}.lang-bar{padding:8px 16px}
     }
 
@@ -139,15 +127,15 @@
       <span data-lang="ca">Construint equips<br>que creen <em>grans productes</em></span>
     </h1>
     <p class="hero-intro">
-      <span data-lang="en" class="active">Christian Fuertes — 10+ years growing from developer to Engineering Manager. Currently leading multiple teams at Qualifyze, a B2B scale-up in Barcelona.</span>
-      <span data-lang="es">Christian Fuertes — Más de 10 años creciendo de developer a Engineering Manager. Actualmente liderando múltiples equipos en Qualifyze, una scale-up B2B en Barcelona.</span>
-      <span data-lang="ca">Christian Fuertes — Més de 10 anys creixent de developer a Engineering Manager. Actualment liderant múltiples equips a Qualifyze, una scale-up B2B a Barcelona.</span>
+      <span data-lang="en" class="active">Christian Fuertes. 10+ years growing from developer to Engineering Manager. Currently leading multiple teams at Qualifyze, a B2B scale-up in Barcelona.</span>
+      <span data-lang="es">Christian Fuertes. Más de 10 años creciendo de developer a Engineering Manager. Actualmente liderando múltiples equipos en Qualifyze, una scale-up B2B en Barcelona.</span>
+      <span data-lang="ca">Christian Fuertes. Més de 10 anys creixent de developer a Engineering Manager. Actualment liderant múltiples equips a Qualifyze, una scale-up B2B a Barcelona.</span>
     </p>
     <div class="hero-chips">
       <span class="hero-chip">Barcelona</span>
       <span class="hero-chip">Remote-first</span>
       <span class="hero-chip"><span data-lang="en" class="active">7–10 people</span><span data-lang="es">7–10 personas</span><span data-lang="ca">7–10 persones</span></span>
-      <span class="hero-chip"><span data-lang="en" class="active">Reports to VP Eng</span><span data-lang="es">Reporta al VP Eng</span><span data-lang="ca">Reporta al VP Eng</span></span>
+      <span class="hero-chip"><span data-lang="en" class="active">Reports to Head of Eng / CTO</span><span data-lang="es">Reporta al Head of Eng / CTO</span><span data-lang="ca">Reporta al Head of Eng / CTO</span></span>
     </div>
   </div>
   <div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
@@ -160,21 +148,18 @@
     <p class="section-label"><span data-lang="en" class="active">My path</span><span data-lang="es">Mi camino</span><span data-lang="ca">El meu camí</span></p>
     <div data-lang="en" class="active">
       <p class="narrative"><strong>I'm an Engineering Manager who grew from the code.</strong> I spent over a decade writing software, leading projects and shipping products before moving into full-time management.</p>
-      <p class="narrative">I made that switch because I realized the biggest impact doesn't come from the code I write — it comes from the <strong>environment I create</strong> for others to do their best work.</p>
-      <div class="pull-quote">The best code I ever wrote was the team that writes code without me.</div>
-      <p class="narrative">Today I manage multiple teams, own hiring and budget, and report directly to the VP Engineering. But my day-to-day is really about three things: <strong>making sure people grow</strong>, making sure we <strong>ship what matters</strong>, and making sure <strong>technology serves the business</strong> — not the other way around.</p>
+      <p class="narrative">I made that switch because I realized the biggest impact doesn't come from the code I write. It comes from the <strong>environment I create</strong> for others to do their best work.</p>
+      <p class="narrative">Today I manage multiple teams, report to the Head of Engineering and the CTO, and work closely with the CPO. I own hiring and budget, and informally mentor other leads. My day-to-day is really about three things: <strong>making sure people grow</strong>, making sure we <strong>ship what matters</strong>, and making sure <strong>technology serves the business</strong>, not the other way around.</p>
     </div>
     <div data-lang="es">
       <p class="narrative"><strong>Soy un Engineering Manager que creció desde el código.</strong> Pasé más de una década escribiendo software, liderando proyectos y entregando productos antes de pasar a gestión a tiempo completo.</p>
-      <p class="narrative">Hice ese cambio porque me di cuenta de que el mayor impacto no viene del código que escribo — viene del <strong>entorno que creo</strong> para que otros hagan su mejor trabajo.</p>
-      <div class="pull-quote">El mejor código que escribí fue el equipo que escribe código sin mí.</div>
-      <p class="narrative">Hoy gestiono múltiples equipos, soy responsable de hiring y presupuesto, y reporto directamente al VP Engineering. Pero mi día a día gira en torno a tres cosas: <strong>que las personas crezcan</strong>, que <strong>entreguemos lo que importa</strong>, y que la <strong>tecnología sirva al negocio</strong> — no al revés.</p>
+      <p class="narrative">Hice ese cambio porque me di cuenta de que el mayor impacto no viene del código que escribo. Viene del <strong>entorno que creo</strong> para que otros hagan su mejor trabajo.</p>
+      <p class="narrative">Hoy gestiono múltiples equipos, reporto al Head of Engineering y al CTO, y trabajo de forma cercana al CPO. Soy responsable de hiring y presupuesto y mentorizo de forma informal a otros leads. Mi día a día gira en torno a tres cosas: <strong>que las personas crezcan</strong>, que <strong>entreguemos lo que importa</strong>, y que la <strong>tecnología sirva al negocio</strong>, no al revés.</p>
     </div>
     <div data-lang="ca">
       <p class="narrative"><strong>Sóc un Engineering Manager que va créixer des del codi.</strong> Vaig passar més d'una dècada escrivint software, liderant projectes i lliurant productes abans de passar a gestió a temps complet.</p>
-      <p class="narrative">Vaig fer aquest canvi perquè em vaig adonar que el major impacte no ve del codi que escric — ve de l'<strong>entorn que creo</strong> perquè els altres facin la seva millor feina.</p>
-      <div class="pull-quote">El millor codi que vaig escriure va ser l'equip que escriu codi sense mi.</div>
-      <p class="narrative">Avui gestiono múltiples equips, sóc responsable de hiring i pressupost, i reporto directament al VP Engineering. Però el meu dia a dia gira al voltant de tres coses: <strong>que les persones creixin</strong>, que <strong>lliurem el que importa</strong>, i que la <strong>tecnologia serveixi al negoci</strong> — no a l'inrevés.</p>
+      <p class="narrative">Vaig fer aquest canvi perquè em vaig adonar que el major impacte no ve del codi que escric. Ve de l'<strong>entorn que creo</strong> perquè els altres facin la seva millor feina.</p>
+      <p class="narrative">Avui gestiono múltiples equips, reporto al Head of Engineering i al CTO, i treballo de forma propera al CPO. Sóc responsable de hiring i pressupost i mentorejo de forma informal altres leads. El meu dia a dia gira al voltant de tres coses: <strong>que les persones creixin</strong>, que <strong>lliurem el que importa</strong>, i que la <strong>tecnologia serveixi al negoci</strong>, no a l'inrevés.</p>
     </div>
   </section>
 
@@ -200,16 +185,6 @@
     </div>
   </section>
 
-  <!-- NUMBERS -->
-  <section class="reveal">
-    <p class="section-label"><span data-lang="en" class="active">By the numbers</span><span data-lang="es">En cifras</span><span data-lang="ca">En xifres</span></p>
-    <div class="numbers-grid">
-      <div class="number-item"><p class="number-big">10+</p><p class="number-label"><span data-lang="en" class="active">Years in tech</span><span data-lang="es">Años en tech</span><span data-lang="ca">Anys en tech</span></p></div>
-      <div class="number-item"><p class="number-big">7–10</p><p class="number-label"><span data-lang="en" class="active">People managed</span><span data-lang="es">Personas gestionadas</span><span data-lang="ca">Persones gestionades</span></p></div>
-      <div class="number-item"><p class="number-big">6</p><p class="number-label"><span data-lang="en" class="active">Companies shaped</span><span data-lang="es">Empresas impactadas</span><span data-lang="ca">Empreses impactades</span></p></div>
-      <div class="number-item"><p class="number-big">4</p><p class="number-label"><span data-lang="en" class="active">Languages spoken</span><span data-lang="es">Idiomas hablados</span><span data-lang="ca">Idiomes parlats</span></p></div>
-    </div>
-  </section>
 
   <!-- EXPERIENCE -->
   <section class="reveal">
@@ -218,7 +193,7 @@
       <li>
         <div class="tl-header"><span class="tl-role">Engineering Manager</span><span class="tl-company">Qualifyze</span></div>
         <p class="tl-dates">2024 – present</p>
-        <p class="tl-desc"><span data-lang="en" class="active">Multiple teams, 7–10 people. Hiring, budget, engineering standards. Reporting to VP Engineering. Architected the Supplier & Market Intelligence system.</span><span data-lang="es">Múltiples equipos, 7–10 personas. Hiring, presupuesto, estándares de ingeniería. Reporte al VP Engineering. Diseñé el sistema de Supplier & Market Intelligence.</span><span data-lang="ca">Múltiples equips, 7–10 persones. Hiring, pressupost, estàndards d'enginyeria. Report al VP Engineering. Vaig dissenyar el sistema de Supplier & Market Intelligence.</span></p>
+        <p class="tl-desc"><span data-lang="en" class="active">Multiple teams, 7–10 people. Hiring, budget, engineering standards. Reporting to the Head of Engineering and the CTO, working closely with the CPO. Architected the Supplier &amp; Market Intelligence system.</span><span data-lang="es">Múltiples equipos, 7–10 personas. Hiring, presupuesto, estándares de ingeniería. Reporte al Head of Engineering y al CTO, trabajo cercano con el CPO. Diseñé el sistema de Supplier &amp; Market Intelligence.</span><span data-lang="ca">Múltiples equips, 7–10 persones. Hiring, pressupost, estàndards d'enginyeria. Report al Head of Engineering i al CTO, treball proper amb el CPO. Vaig dissenyar el sistema de Supplier &amp; Market Intelligence.</span></p>
       </li>
       <li>
         <div class="tl-header"><span class="tl-role">Senior Software Engineer</span><span class="tl-company">Qualifyze</span></div>
@@ -226,7 +201,7 @@
         <p class="tl-desc"><span data-lang="en" class="active">Full-stack development (TypeScript, NestJS, React). Technical mentoring and code review.</span><span data-lang="es">Desarrollo full stack (TypeScript, NestJS, React). Mentoring técnico y code review.</span><span data-lang="ca">Desenvolupament full stack (TypeScript, NestJS, React). Mentoring tècnic i code review.</span></p>
       </li>
       <li>
-        <div class="tl-header"><span class="tl-role">Lead Developer — Voice & Smart Home</span><span class="tl-company">Wallbox Chargers</span></div>
+        <div class="tl-header"><span class="tl-role">Lead Developer, Voice &amp; Smart Home</span><span class="tl-company">Wallbox Chargers</span></div>
         <p class="tl-dates">2021 – 2023</p>
         <p class="tl-desc"><span data-lang="en" class="active">Technical lead for Alexa, Google Home and SmartThings integrations. Defined roadmap and OKRs. C-level stakeholder demos.</span><span data-lang="es">Liderazgo técnico de integraciones con Alexa, Google Home y SmartThings. Roadmap, OKRs y demos a C-level.</span><span data-lang="ca">Lideratge tècnic d'integracions amb Alexa, Google Home i SmartThings. Roadmap, OKRs i demos a C-level.</span></p>
       </li>
@@ -248,24 +223,6 @@
     </ul>
   </section>
 
-  <!-- FEATURED WORK -->
-  <section class="reveal">
-    <p class="section-label"><span data-lang="en" class="active">Featured work</span><span data-lang="es">Proyectos destacados</span><span data-lang="ca">Projectes destacats</span></p>
-    <div class="projects-grid">
-      <div class="project-card">
-        <p class="project-tag">Qualifyze</p>
-        <p class="project-name">Supplier & Market Intelligence</p>
-        <p class="project-desc"><span data-lang="en" class="active">Scalable architecture handling large volumes of supplier data for the pharmaceutical industry. Designed from scratch to support business growth.</span><span data-lang="es">Arquitectura escalable para grandes volúmenes de datos de proveedores farmacéuticos. Diseñada desde cero para soportar el crecimiento del negocio.</span><span data-lang="ca">Arquitectura escalable per a grans volums de dades de proveïdors farmacèutics. Dissenyada des de zero per suportar el creixement del negoci.</span></p>
-        <div class="project-stack"><span>TypeScript</span><span>NestJS</span><span>AWS</span><span>React</span></div>
-      </div>
-      <div class="project-card">
-        <p class="project-tag">Wallbox Chargers</p>
-        <p class="project-name">Voice & Smart Home</p>
-        <p class="project-desc"><span data-lang="en" class="active">Full integration suite for Alexa, Google Home and Samsung SmartThings. Defined UX flows, monitored adoption metrics and iterated based on user analytics.</span><span data-lang="es">Suite completa de integración con Alexa, Google Home y Samsung SmartThings. Definición de flujos UX, métricas de adopción e iteración basada en analíticas.</span><span data-lang="ca">Suite completa d'integració amb Alexa, Google Home i Samsung SmartThings. Definició de fluxos UX, mètriques d'adopció i iteració basada en analítiques.</span></p>
-        <div class="project-stack"><span>Node.js</span><span>Alexa SDK</span><span>AWS</span><span>Terraform</span></div>
-      </div>
-    </div>
-  </section>
 
   <!-- TECH DNA -->
   <section class="reveal">
