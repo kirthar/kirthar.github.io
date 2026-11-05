@@ -1,0 +1,4 @@
+# Design tooling and internal notes: keep out of the published site
+PRODUCT.md
+DESIGN.md
+.impeccable/

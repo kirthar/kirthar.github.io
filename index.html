@@ -1,264 +1,463 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Christian Fuertes — Engineering Manager. Building high-performing teams and scalable products.">
-  <meta name="author" content="Christian Fuertes">
-  <meta property="og:title" content="Christian Fuertes — Engineering Manager">
-  <meta property="og:description" content="Building high-performing teams and scalable products.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://chris.cat">
-  <title>Christian Fuertes — Engineering Manager</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <style>
-    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    :root{--bg:#faf9f7;--bg-card:#fff;--text:#1a1a1a;--text-2:#4b5563;--text-3:#9ca3af;--accent:#0e9fa0;--accent-dk:#0a7d7e;--accent-soft:#e8f6f6;--border:#e8e6e3;--radius:12px;--font:'DM Sans',sans-serif;--serif:'Instrument Serif',serif}
-    html{scroll-behavior:smooth}
-    body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Christian Fuertes · Engineering Manager</title>
+<meta name="description" content="Christian Fuertes is a hands-on Engineering Manager in Barcelona with 14 years in software. He leads cross-functional teams of up to 15 and stays close to the code across frontend, backend and DevOps.">
+<meta name="author" content="Christian Fuertes">
+<link rel="canonical" href="https://chris.cat/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://chris.cat/">
+<meta property="og:title" content="Christian Fuertes · Engineering Manager">
+<meta property="og:description" content="Hands-on Engineering Manager in Barcelona. 14 years in software, leading cross-functional teams of up to 15.">
+<meta property="og:image" content="https://chris.cat/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/schibsted-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/sourceserif-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Christian Fuertes","jobTitle":"Engineering Manager","url":"https://chris.cat","image":"https://chris.cat/photo.jpg","email":"mailto:chris.fuertes@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Barcelona","addressCountry":"ES"},"worksFor":{"@type":"Organization","name":"Qualifyze"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Universitat Politècnica de Catalunya"},"knowsLanguage":["en","es","ca"],"sameAs":["https://www.linkedin.com/in/chrisfuertes","https://github.com/kirthar"]}
+</script>
+<style>
+@font-face{font-family:"Schibsted Grotesk";src:url(fonts/schibsted-latin.woff2) format("woff2");font-weight:400 900;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Schibsted Grotesk";src:url(fonts/schibsted-latin-ext.woff2) format("woff2");font-weight:400 900;font-style:normal;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Source Serif 4";src:url(fonts/sourceserif-latin.woff2) format("woff2");font-weight:200 900;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Source Serif 4";src:url(fonts/sourceserif-latin-ext.woff2) format("woff2");font-weight:200 900;font-style:normal;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 
-    .lang-bar{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:flex-end;align-items:center;gap:2px;padding:12px 28px;background:rgba(250,249,247,0);backdrop-filter:blur(12px);transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
-    .lang-bar.scrolled{background:rgba(250,249,247,.88);border-bottom-color:var(--border)}
-    .lang-bar button{font-family:var(--font);font-size:.75rem;font-weight:500;letter-spacing:.04em;padding:5px 12px;border:1px solid transparent;border-radius:6px;background:none;cursor:pointer;transition:all .2s}
-    .lang-bar.scrolled button{color:var(--text-3)}.lang-bar:not(.scrolled) button{color:rgba(255,255,255,.6)}
-    .lang-bar:not(.scrolled) button:hover{color:#fff}.lang-bar.scrolled button:hover{color:var(--text)}
-    .lang-bar button.active{color:var(--accent)!important;background:var(--accent-soft);border-color:var(--accent)}
-    .lang-bar:not(.scrolled) button.active{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.3);color:#fff!important}
+:root{
+  --paper:#f3f4f1; --ink:#0f1411; --ink-2:#3d4540; --ink-3:#5c635f; --rule:#d3d7d0; --mark:#cdf23a;
+  --sans:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --gutter:clamp(20px,4vw,56px);
+  --ease:cubic-bezier(.16,1,.3,1);
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#0d110f; --ink:#eef1ec; --ink-2:#bcc3bd; --ink-3:#8f9791; --rule:#273029}
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scrollbar-color:var(--ink-3) var(--paper)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1.1875rem;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:var(--mark);color:#0f1411}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.22em}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:var(--gutter);top:-4rem;z-index:10;background:var(--ink);color:var(--paper);padding:.6rem 1rem;font:600 .9rem var(--sans);text-decoration:none}
+.skip:focus{top:12px}
 
-    .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--accent-dk)}
-    .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 20%,rgba(14,159,160,.6) 0%,transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(10,125,126,.4) 0%,transparent 50%),linear-gradient(160deg,#0a7d7e 0%,#064e4f 50%,#042f30 100%)}
-    .hero-grain{position:absolute;inset:0;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-    .hero-gradient{position:absolute;bottom:0;left:0;right:0;height:60%;background:linear-gradient(to top,rgba(4,47,48,.7) 0%,transparent 100%)}
-    .hero-content{position:relative;z-index:2;padding:0 clamp(24px,5vw,80px) 64px;max-width:920px}
-    .hero-label{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:12px;opacity:0;animation:fadeUp .7s ease .2s forwards}
-    .hero h1{font-family:var(--serif);font-size:clamp(2.8rem,7vw,4.5rem);font-weight:400;line-height:1.08;color:#fff;margin-bottom:20px;opacity:0;animation:fadeUp .8s ease .35s forwards}
-    .hero h1 em{font-style:italic;color:rgba(255,255,255,.7)}
-    .hero-intro{font-size:1.05rem;color:rgba(255,255,255,.65);max-width:520px;line-height:1.65;margin-bottom:32px;opacity:0;animation:fadeUp .7s ease .5s forwards}
-    .hero-chips{display:flex;flex-wrap:wrap;gap:8px;opacity:0;animation:fadeUp .7s ease .65s forwards}
-    .hero-chip{font-size:.78rem;font-weight:500;padding:6px 16px;border-radius:20px;background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(4px)}
-    .hero-photo{position:absolute;z-index:2;top:clamp(80px,12vh,140px);right:clamp(24px,5vw,80px);width:clamp(100px,14vw,160px);height:clamp(100px,14vw,160px);border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.2);opacity:0;animation:fadeIn 1s ease .6s forwards}
-    .hero-scroll{position:absolute;z-index:2;bottom:20px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0;animation:fadeIn 1s ease 1.2s forwards}
-    .hero-scroll span{font-size:.68rem;color:rgba(255,255,255,.3);letter-spacing:.1em;text-transform:uppercase}
-    .scroll-line{width:1px;height:32px;background:rgba(255,255,255,.2);position:relative;overflow:hidden}
-    .scroll-line::after{content:'';position:absolute;top:-100%;left:0;width:100%;height:100%;background:rgba(255,255,255,.6);animation:scrollPulse 2s ease-in-out infinite}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--gutter)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px)}
 
-    .container{max-width:780px;margin:0 auto;padding:0 24px}
-    section{padding:72px 0}section+section{border-top:1px solid var(--border)}
-    .section-label{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:28px}
+/* Hero */
+.hero{min-height:min(100svh,960px);display:grid;grid-template-rows:auto 1fr}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding-top:22px;padding-bottom:22px;font:600 .875rem/1.4 var(--sans)}
+.topbar .mark-name{color:var(--ink-3)}
+.lang{display:flex;gap:4px}
+.lang button{position:relative;font:inherit;color:var(--ink-3);background:none;border:0;padding:6px 8px;cursor:pointer;border-radius:2px;transition:color .2s}
+.lang button::after{content:"";position:absolute;inset:-7px -3px}
+.lang button:hover{color:var(--ink)}
+.lang button[aria-pressed="true"]{color:#0f1411;background:var(--mark)}
+.hero-body{align-self:end;padding-bottom:clamp(40px,7vw,88px);align-items:end;row-gap:40px}
+.hero-text{grid-column:1/9}
+.hero-photo{grid-column:9/13;margin:0}
+.hero-photo img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 14%;background:#d9dadb}
+h1{margin:0 0 clamp(24px,3vw,40px);font:800 clamp(3.25rem,10.5vw,6rem)/.93 var(--sans);letter-spacing:-.035em;text-wrap:balance}
+.position{margin:0 0 32px;max-width:27em;font-size:clamp(1.3rem,2.3vw,1.7rem);line-height:1.38;color:var(--ink-2)}
+.position strong{color:var(--ink);font-weight:650}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin-bottom:28px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 1.6rem;line-height:1.3;background:var(--ink);color:var(--paper);font:650 1rem var(--sans);text-decoration:none;border-radius:3px;transition:background-color .2s,color .2s}
+.btn:hover{background:var(--mark);color:#0f1411}
+.link-arrow{display:inline-flex;align-items:center;gap:.5rem;font:650 1rem/1.3 var(--sans);min-height:48px}
+.link-arrow svg{width:18px;height:18px;flex:none}
+.meta{margin:0;color:var(--ink-3);font:500 .9375rem var(--sans)}
 
-    .narrative{font-size:1.05rem;color:var(--text-2);max-width:600px}.narrative+.narrative{margin-top:16px}
-    .narrative strong{color:var(--text);font-weight:500}
+/* Sections */
+section,footer .wrap{background:linear-gradient(var(--rule),var(--rule)) no-repeat center top/calc(100% - 2*var(--gutter)) 1px}
+section{padding-top:clamp(56px,9vw,112px);padding-bottom:clamp(56px,9vw,112px)}
+h2{grid-column:1/4;margin:0 0 28px;font:800 1.75rem/1.15 var(--sans);letter-spacing:-.025em;align-self:start;text-wrap:balance}
+.content{grid-column:4/13;max-width:46rem}
+@media (min-width:900px){h2{position:sticky;top:28px;margin-bottom:0}}
+h3{margin:0 0 .35rem;font:700 1.125rem/1.3 var(--sans);letter-spacing:-.01em}
+.content p{margin:0 0 1.1em}
+.content p:not(.lede){max-width:37rem}
+.content p:last-child{margin-bottom:0}
+.lede{font-size:clamp(1.375rem,2.6vw,1.8rem);line-height:1.5;color:var(--ink)}
+.stack>div+div{margin-top:2.25rem}
+.stack p{color:var(--ink-2)}
 
-    .values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-    .value-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
-    .value-icon{width:36px;height:36px;border-radius:10px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--accent)}
-    .value-title{font-weight:600;font-size:.92rem;color:var(--text);margin-bottom:6px}
-    .value-desc{font-size:.85rem;color:var(--text-2);line-height:1.55}
+/* The one authored moment: a lime marker sweeps behind each figure */
+mark{color:#0f1411;font-weight:600;padding:.02em .16em;margin:0 -.16em;-webkit-box-decoration-break:clone;box-decoration-break:clone;background:linear-gradient(var(--mark),var(--mark)) no-repeat left center/100% 100%}
+.js [data-reveal] mark{color:var(--ink);background-size:0% 100%;transition:background-size .9s var(--ease) var(--d,0ms),color .3s ease calc(var(--d,0ms) + .35s)}
+.js [data-reveal].seen mark{color:#0f1411;background-size:100% 100%}
+@media (prefers-reduced-motion:reduce){.js [data-reveal] mark{transition:none;color:#0f1411;background-size:100% 100%}}
 
+/* Experience */
+.roles{list-style:none;margin:0;padding:0}
+.roles li{display:grid;grid-template-columns:8.5rem 1fr;gap:4px 24px;padding-top:1.6rem;padding-bottom:1.6rem;border-top:1px solid var(--rule)}
+.roles li:first-child{border-top:0;padding-top:0}
+.roles li:last-child{padding-bottom:0}
+.when{font:500 .9375rem/1.9 var(--sans);color:var(--ink-3);font-variant-numeric:tabular-nums}
+.role{margin:0;font:700 1.1875rem/1.35 var(--sans);letter-spacing:-.01em}
+.role span{font-weight:500;color:var(--ink-2)}
+.where{margin:.1rem 0 .55rem;font:500 .9375rem var(--sans);color:var(--ink-3)}
+.roles p{margin:0;color:var(--ink-2)}
 
+/* Skills */
+dl{margin:0}
+.skills>div{display:grid;grid-template-columns:9rem 1fr;gap:4px 24px;padding-top:.85rem;padding-bottom:.85rem;border-top:1px solid var(--rule)}
+.skills>div:first-child{border-top:0;padding-top:0}
+dt{font:700 1rem/1.6 var(--sans)}
+dd{margin:0;color:var(--ink-2);font-size:1.0625rem}
+.plain p{color:var(--ink-2)}
 
-    .timeline{list-style:none}
-    .timeline li{position:relative;padding-left:28px;padding-bottom:28px}
-    .timeline li:last-child{padding-bottom:0}
-    .timeline li::before{content:'';position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
-    .timeline li::after{content:'';position:absolute;left:3.5px;top:20px;width:1px;height:calc(100% - 16px);background:var(--border)}
-    .timeline li:last-child::after{display:none}
-    .tl-header{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px;margin-bottom:2px}
-    .tl-role{font-weight:600;font-size:.95rem;color:var(--text)}
-    .tl-company{font-size:.88rem;color:var(--accent)}
-    .tl-dates{font-size:.78rem;color:var(--text-3)}
-    .tl-desc{font-size:.88rem;color:var(--text-2);margin-top:4px}
+/* Contact */
+.mail{display:inline-block;font:800 clamp(1.6rem,4.6vw,2.9rem)/1.15 var(--sans);letter-spacing:-.03em;text-decoration:none;overflow-wrap:anywhere;margin:.2rem 0 1.4rem;background:linear-gradient(var(--mark),var(--mark)) no-repeat left 92%/0% 30%;transition:background-size .5s var(--ease)}
+.mail:hover,.mail:focus-visible{background-size:100% 30%}
+.links{display:flex;flex-wrap:wrap;gap:6px 28px;font:650 1rem var(--sans)}
+.links a{display:inline-flex;align-items:center;gap:.5rem;min-height:44px}
+.links svg{width:18px;height:18px}
+footer .wrap{padding-top:28px;padding-bottom:44px}
+.privacy{margin:6px 0 0}
+footer{font:500 .875rem var(--sans);color:var(--ink-3)}
 
-
-
-    .tech-groups{display:flex;flex-direction:column;gap:20px}
-    .tech-group-label{font-size:.78rem;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
-    .tags{display:flex;flex-wrap:wrap;gap:8px}
-    .tag{font-size:.82rem;padding:6px 16px;border-radius:20px;font-weight:500;background:var(--accent-soft);color:var(--accent-dk)}
-    .tag.n{background:#f1f0ed;color:var(--text-2)}
-
-    .contact-text{font-size:1.05rem;color:var(--text-2);max-width:480px;margin-bottom:24px}
-    .contact-links{display:flex;flex-wrap:wrap;gap:12px}
-    .contact-links a{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;font-weight:500;padding:10px 22px;border:1px solid var(--border);border-radius:8px;color:var(--text);text-decoration:none;transition:all .2s}
-    .contact-links a:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
-    .contact-links a svg{width:18px;height:18px;flex-shrink:0}
-
-    footer{padding:28px 0;border-top:1px solid var(--border);text-align:center;font-size:.78rem;color:var(--text-3)}
-
-    @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-    @keyframes scrollPulse{0%{top:-100%}50%{top:100%}100%{top:100%}}
-    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
-    .reveal.visible{opacity:1;transform:none}
-
-    @media(max-width:640px){
-      .hero-photo{width:80px!important;height:80px!important;top:70px!important;right:20px!important}
-      .hero-content{padding-bottom:48px}.hero h1{max-width:70%}
-      section{padding:56px 0}
-      .values-grid{grid-template-columns:1fr}.lang-bar{padding:8px 16px}
-    }
-
-    [data-lang]{display:none}[data-lang].active{display:block}
-    span[data-lang]{display:none}span[data-lang].active{display:inline}
-    p[data-lang]{display:none}p[data-lang].active{display:block}
-    div[data-lang]{display:none}div[data-lang].active{display:block}
-  </style>
+@media (max-width:899px){
+  .hero-text,.hero-photo{grid-column:1/-1}
+  .hero-photo{max-width:220px}
+  .hero-body{row-gap:28px}
+  h2,.content{grid-column:1/-1}
+  h2{margin-bottom:22px}
+}
+@media (max-width:560px){
+  body{font-size:1.125rem}
+  .roles li,.skills>div{grid-template-columns:1fr}
+  .when{line-height:1.5}
+  .btn{width:100%;justify-content:center}
+}
+</style>
 </head>
 <body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 
-<nav class="lang-bar" id="langbar">
-  <button onclick="setLang('ca')" id="btn-ca">CA</button>
-  <button onclick="setLang('es')" id="btn-es">ES</button>
-  <button onclick="setLang('en')" id="btn-en">EN</button>
-</nav>
-
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grain"></div>
-  <div class="hero-gradient"></div>
-  <img src="photo.png" alt="Christian Fuertes" class="hero-photo">
-  <div class="hero-content">
-    <p class="hero-label">Engineering Manager</p>
-    <h1>
-      <span data-lang="en" class="active">Building teams<br>that build <em>great products</em></span>
-      <span data-lang="es">Construyendo equipos<br>que crean <em>grandes productos</em></span>
-      <span data-lang="ca">Construint equips<br>que creen <em>grans productes</em></span>
-    </h1>
-    <p class="hero-intro">
-      <span data-lang="en" class="active">Christian Fuertes. 10+ years growing from developer to Engineering Manager. Currently leading multiple teams at Qualifyze, a B2B scale-up in Barcelona.</span>
-      <span data-lang="es">Christian Fuertes. Más de 10 años creciendo de developer a Engineering Manager. Actualmente liderando múltiples equipos en Qualifyze, una scale-up B2B en Barcelona.</span>
-      <span data-lang="ca">Christian Fuertes. Més de 10 anys creixent de developer a Engineering Manager. Actualment liderant múltiples equips a Qualifyze, una scale-up B2B a Barcelona.</span>
-    </p>
-    <div class="hero-chips">
-      <span class="hero-chip">Barcelona</span>
-      <span class="hero-chip">Remote-first</span>
-      <span class="hero-chip"><span data-lang="en" class="active">7–10 people</span><span data-lang="es">7–10 personas</span><span data-lang="ca">7–10 persones</span></span>
-      <span class="hero-chip"><span data-lang="en" class="active">Reports to Head of Eng / CTO</span><span data-lang="es">Reporta al Head of Eng / CTO</span><span data-lang="ca">Reporta al Head of Eng / CTO</span></span>
-    </div>
+<header class="hero wrap">
+  <div class="topbar">
+    <span class="mark-name">chris.cat</span>
+    <nav class="lang" aria-label="Language">
+      <button type="button" data-lang="en" lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="es" lang="es" aria-pressed="false">ES</button>
+      <button type="button" data-lang="ca" lang="ca" aria-pressed="false">CA</button>
+    </nav>
   </div>
-  <div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
-</section>
-
-<div class="container">
-
-  <!-- MY PATH -->
-  <section class="reveal">
-    <p class="section-label"><span data-lang="en" class="active">My path</span><span data-lang="es">Mi camino</span><span data-lang="ca">El meu camí</span></p>
-    <div data-lang="en" class="active">
-      <p class="narrative"><strong>I'm an Engineering Manager who grew from the code.</strong> I spent over a decade writing software, leading projects and shipping products before moving into full-time management.</p>
-      <p class="narrative">I made that switch because I realized the biggest impact doesn't come from the code I write. It comes from the <strong>environment I create</strong> for others to do their best work.</p>
-      <p class="narrative">Today I manage multiple teams, report to the Head of Engineering and the CTO, and work closely with the CPO. I own hiring and budget, and informally mentor other leads. My day-to-day is really about three things: <strong>making sure people grow</strong>, making sure we <strong>ship what matters</strong>, and making sure <strong>technology serves the business</strong>, not the other way around.</p>
-    </div>
-    <div data-lang="es">
-      <p class="narrative"><strong>Soy un Engineering Manager que creció desde el código.</strong> Pasé más de una década escribiendo software, liderando proyectos y entregando productos antes de pasar a gestión a tiempo completo.</p>
-      <p class="narrative">Hice ese cambio porque me di cuenta de que el mayor impacto no viene del código que escribo. Viene del <strong>entorno que creo</strong> para que otros hagan su mejor trabajo.</p>
-      <p class="narrative">Hoy gestiono múltiples equipos, reporto al Head of Engineering y al CTO, y trabajo de forma cercana al CPO. Soy responsable de hiring y presupuesto y mentorizo de forma informal a otros leads. Mi día a día gira en torno a tres cosas: <strong>que las personas crezcan</strong>, que <strong>entreguemos lo que importa</strong>, y que la <strong>tecnología sirva al negocio</strong>, no al revés.</p>
-    </div>
-    <div data-lang="ca">
-      <p class="narrative"><strong>Sóc un Engineering Manager que va créixer des del codi.</strong> Vaig passar més d'una dècada escrivint software, liderant projectes i lliurant productes abans de passar a gestió a temps complet.</p>
-      <p class="narrative">Vaig fer aquest canvi perquè em vaig adonar que el major impacte no ve del codi que escric. Ve de l'<strong>entorn que creo</strong> perquè els altres facin la seva millor feina.</p>
-      <p class="narrative">Avui gestiono múltiples equips, reporto al Head of Engineering i al CTO, i treballo de forma propera al CPO. Sóc responsable de hiring i pressupost i mentorejo de forma informal altres leads. El meu dia a dia gira al voltant de tres coses: <strong>que les persones creixin</strong>, que <strong>lliurem el que importa</strong>, i que la <strong>tecnologia serveixi al negoci</strong>, no a l'inrevés.</p>
-    </div>
-  </section>
-
-  <!-- WHAT I BELIEVE -->
-  <section class="reveal">
-    <p class="section-label"><span data-lang="en" class="active">What I believe</span><span data-lang="es">En qué creo</span><span data-lang="ca">En què crec</span></p>
-    <div class="values-grid">
-      <div class="value-card">
-        <div class="value-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <p class="value-title"><span data-lang="en" class="active">People first</span><span data-lang="es">Personas primero</span><span data-lang="ca">Persones primer</span></p>
-        <p class="value-desc"><span data-lang="en" class="active">Great products are built by great teams. I invest in 1:1s, career plans and honest feedback because that's where real performance comes from.</span><span data-lang="es">Los grandes productos los construyen grandes equipos. Invierto en 1:1s, planes de carrera y feedback honesto porque de ahí viene el rendimiento real.</span><span data-lang="ca">Els grans productes els construeixen grans equips. Inverteixo en 1:1s, plans de carrera i feedback honest perquè d'aquí ve el rendiment real.</span></p>
+  <div class="hero-body grid">
+    <div class="hero-text">
+      <h1>Christian Fuertes</h1>
+      <p class="position" data-i18n="position"><strong>Engineering Manager</strong> with 14 years in software. I lead cross-functional teams and stay hands-on across frontend, backend and DevOps.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:chris.fuertes@gmail.com" data-track="email-hero" data-i18n="cta_email">Email me</a>
+        <a class="link-arrow" href="Christian_Fuertes_CV.pdf" data-track="cv-hero" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 11 5 5 5-5"/><path d="M5 20h14"/></svg>
+          <span data-i18n="cta_cv">Download CV (PDF)</span>
+        </a>
       </div>
-      <div class="value-card">
-        <div class="value-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-        <p class="value-title"><span data-lang="en" class="active">Outcome over output</span><span data-lang="es">Resultado sobre actividad</span><span data-lang="ca">Resultat sobre activitat</span></p>
-        <p class="value-desc"><span data-lang="en" class="active">Shipping fast matters, but shipping the right thing matters more. I push for clarity on what success looks like before we write a single line.</span><span data-lang="es">Entregar rápido importa, pero entregar lo correcto importa más. Busco claridad sobre qué es éxito antes de escribir una sola línea.</span><span data-lang="ca">Lliurar ràpid importa, però lliurar el correcte importa més. Busco claredat sobre què és èxit abans d'escriure una sola línia.</span></p>
+      <p class="meta" data-i18n="meta">Barcelona, remote-first. 14 years in software, 6+ years leading teams.</p>
+    </div>
+    <figure class="hero-photo">
+      <img src="photo.jpg" width="512" height="512" alt="Portrait of Christian Fuertes" fetchpriority="high">
+    </figure>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap grid" data-view="leadership">
+    <h2 data-i18n="h_lead">Leadership</h2>
+    <div class="content">
+      <p class="lede" data-reveal data-i18n="lead_lede">I lead a cross-functional team of <mark>up to 15 people</mark> across frontend, backend, infrastructure, data and product, with <mark>6 direct reports</mark>, and I stand in for the Head of Engineering when needed. I took part in hiring about <mark>10 engineers</mark>, with only 2 departures and 2 promotions, one of them from developer to Engineering Manager.</p>
+      <p data-i18n="lead_p1">I lead by example. I sit with the team, work through problems next to them and keep up regular 1:1s, career plans and honest feedback, including improvement plans when they are needed.</p>
+      <p data-reveal data-i18n="lead_p2">I own delivery from problem definition to release. Splitting epics into smaller units of value cut the average epic lead time <mark>from 5 days to 2</mark> within a month, and PR review turnaround is down 20%, with roadmaps and OKRs that keep the cadence predictable.</p>
+    </div>
+  </section>
+
+  <section class="wrap grid" data-view="technical">
+    <h2 data-i18n="h_tech">Technical depth</h2>
+    <div class="content">
+      <p class="lede" data-reveal data-i18n="tech_lede">I am the main decision maker on architecture and I still write code: NestJS and Java/Spring Boot backends, React and Next.js frontends, and dbt and Dagster on Redshift. The team works to outside-in TDD and holds <mark>90%+ test coverage</mark> with <mark>fewer than 3 bugs a month</mark>. In three years we had <mark>2 major incidents</mark>, and I fixed the critical one in <mark>under 30 minutes</mark>.</p>
+      <p data-i18n="tech_p1">Decisions go through ADRs and RFCs. The standards are a Definition of Done and small Draft PRs with mandatory code review and QA. Systems are cloud-native on AWS (ECS, Lambda, RDS, S3, CloudFront, API Gateway) with Docker, Terraform and CI/CD, and I have hardened IAM, secrets and WAF.</p>
+      <p data-i18n="tech_p2">I led a data migration to a new serving database and built the parity-check harness that gated the cutover on identical output.</p>
+      <p data-i18n="tech_p3">I contributed to the design of LLM-powered features used by customers, such as document extraction and retrieval-augmented search, on OpenAI, Anthropic and AWS Bedrock. In the team I led the adoption of Claude Code with clear norms on when not to rely on it and human review on every PR, and pushed for a shared repository of Claude Code skills that engineering, QA and data now contribute to.</p>
+    </div>
+  </section>
+
+  <section class="wrap grid" data-view="experience">
+    <h2 data-i18n="h_exp">Experience</h2>
+    <div class="content">
+      <ol class="roles">
+        <li>
+          <div class="when" data-i18n="y_now">2023 – Present</div>
+          <div>
+            <h3 class="role">Engineering Manager <span>· Qualifyze</span></h3>
+            <p class="where" data-i18n="w1">Barcelona, remote. B2B scale-up in pharma supplier quality and compliance.</p>
+            <p data-i18n="d1">Lead a cross-functional product team and report to the Head of Engineering and the CTO, owning hiring, architecture decisions and delivery.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when">2021 – 2023</div>
+          <div>
+            <h3 class="role">Lead Developer <span>· Wallbox Chargers</span></h3>
+            <p class="where" data-i18n="w2">Barcelona. Electric vehicle charging.</p>
+            <p data-i18n="d2">Lead developer for voice assistant and smart home integrations of a connected EV charger, on event-driven AWS Lambda backends. Roadmap and OKRs defined with Product.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when">2018 – 2020</div>
+          <div>
+            <h3 class="role">Team Leader &amp; Senior Developer <span>· pEp Security SA</span></h3>
+            <p class="where" data-i18n="w3">Barcelona. Security software.</p>
+            <p data-i18n="d3">Team lead and lead architect of an email encryption extension for a major open-source email client, building a TDD-based quality culture.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when">2014 – 2018</div>
+          <div>
+            <h3 class="role">Lead Developer <span>· BRANDCRUMB</span></h3>
+            <p class="where" data-i18n="w4">Barcelona. Data platforms.</p>
+            <p data-i18n="d4">Node.js data ingestion pipelines on AWS (Redshift, RDS), plus architecture, mentoring and hiring.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when">2013 – 2014</div>
+          <div>
+            <h3 class="role">CTO <span>· Agorique</span></h3>
+            <p class="where" data-i18n="w5">Barcelona. B2B e-commerce.</p>
+            <p data-i18n="d5">Head of Technology for a B2B online sales platform and virtual showroom on Ruby on Rails and Backbone, leading the technical and design team.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when">2012 – 2013</div>
+          <div>
+            <h3 class="role">PHP Developer <span>· LetsBonus (a LivingSocial company)</span></h3>
+            <p class="where" data-i18n="w6">Barcelona. B2C e-commerce.</p>
+            <p data-i18n="d6">Built catalog, checkout, payments and coupons for a high-traffic daily-deals platform and prepared it for flash-sale and seasonal peaks.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="wrap grid" data-view="skills">
+    <h2 data-i18n="h_skills">Skills</h2>
+    <div class="content">
+      <dl class="skills">
+        <div><dt data-i18n="dt_lead">Leadership</dt><dd data-i18n="dd_lead">Hiring, 1:1s and career plans, performance management, roadmaps and OKRs, stakeholder management, mentoring</dd></div>
+        <div><dt>Frontend</dt><dd>React, Next.js, TypeScript, JavaScript, HTML/CSS</dd></div>
+        <div><dt>Backend</dt><dd>Node.js, Express, NestJS, Java/Spring Boot, REST APIs, event-driven architecture, SQL, Python (scripting)</dd></div>
+        <div><dt>Cloud &amp; DevOps</dt><dd>AWS (ECS, Lambda, RDS, S3, CloudFront, API Gateway, Bedrock), Docker, Terraform, CI/CD (GitLab CI, GitHub Actions), Datadog</dd></div>
+        <div><dt>Data</dt><dd>SQL, Redshift, dbt, Dagster</dd></div>
+        <div><dt data-i18n="dt_prac">Practices</dt><dd data-i18n="dd_prac">Outside-in TDD, ADRs and RFCs, Definition of Done, code review, postmortems, spec-driven refinement</dd></div>
+        <div><dt>AI</dt><dd>OpenAI, Anthropic Claude, AWS Bedrock, RAG, agents, function calling, MCP, Claude Code</dd></div>
+        <div><dt data-i18n="dt_dom">Domains</dt><dd data-i18n="dd_dom">B2B SaaS in regulated industries (pharma), e-commerce and payments, IoT, electric mobility, data platforms, security software</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="wrap grid" data-view="education">
+    <h2 data-i18n="h_edu">Education and languages</h2>
+    <div class="content plain">
+      <p data-i18n="edu">BSc in Computer Engineering, Universitat Politècnica de Catalunya (UPC), 2005 to 2012.</p>
+      <p data-i18n="langs">English, full professional. Spanish and Catalan, native. French, basic.</p>
+    </div>
+  </section>
+
+  <section class="wrap grid" data-view="contact">
+    <h2 data-i18n="h_contact">Contact</h2>
+    <div class="content">
+      <p data-i18n="contact_p">Email is the best way to reach me. I am happy to talk about engineering leadership and what your team is building.</p>
+      <a class="mail" href="mailto:chris.fuertes@gmail.com" data-track="email-contact">chris.fuertes@gmail.com</a>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/chrisfuertes" data-track="linkedin" target="_blank" rel="noopener">LinkedIn
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+        <a href="https://github.com/kirthar" data-track="github" target="_blank" rel="noopener">GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+        <a href="Christian_Fuertes_CV.pdf" data-track="cv-contact" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 11 5 5 5-5"/><path d="M5 20h14"/></svg>
+          <span data-i18n="cta_cv2">Download CV (PDF)</span></a>
       </div>
-      <div class="value-card">
-        <div class="value-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-        <p class="value-title"><span data-lang="en" class="active">Tech with purpose</span><span data-lang="es">Tecnología con propósito</span><span data-lang="ca">Tecnologia amb propòsit</span></p>
-        <p class="value-desc"><span data-lang="en" class="active">Technology should serve business goals. I keep technical judgment sharp enough to guide architecture decisions without becoming a bottleneck.</span><span data-lang="es">La tecnología debe servir al negocio. Mantengo criterio técnico para guiar decisiones de arquitectura sin convertirme en cuello de botella.</span><span data-lang="ca">La tecnologia ha de servir al negoci. Mantinc criteri tècnic per guiar decisions d'arquitectura sense convertir-me en coll d'ampolla.</span></p>
-      </div>
     </div>
   </section>
+</main>
 
-
-  <!-- EXPERIENCE -->
-  <section class="reveal">
-    <p class="section-label"><span data-lang="en" class="active">Experience</span><span data-lang="es">Experiencia</span><span data-lang="ca">Experiència</span></p>
-    <ul class="timeline">
-      <li>
-        <div class="tl-header"><span class="tl-role">Engineering Manager</span><span class="tl-company">Qualifyze</span></div>
-        <p class="tl-dates">2024 – present</p>
-        <p class="tl-desc"><span data-lang="en" class="active">Multiple teams, 7–10 people. Hiring, budget, engineering standards. Reporting to the Head of Engineering and the CTO, working closely with the CPO. Architected the Supplier &amp; Market Intelligence system.</span><span data-lang="es">Múltiples equipos, 7–10 personas. Hiring, presupuesto, estándares de ingeniería. Reporte al Head of Engineering y al CTO, trabajo cercano con el CPO. Diseñé el sistema de Supplier &amp; Market Intelligence.</span><span data-lang="ca">Múltiples equips, 7–10 persones. Hiring, pressupost, estàndards d'enginyeria. Report al Head of Engineering i al CTO, treball proper amb el CPO. Vaig dissenyar el sistema de Supplier &amp; Market Intelligence.</span></p>
-      </li>
-      <li>
-        <div class="tl-header"><span class="tl-role">Senior Software Engineer</span><span class="tl-company">Qualifyze</span></div>
-        <p class="tl-dates">2023 – 2024</p>
-        <p class="tl-desc"><span data-lang="en" class="active">Full-stack development (TypeScript, NestJS, React). Technical mentoring and code review.</span><span data-lang="es">Desarrollo full stack (TypeScript, NestJS, React). Mentoring técnico y code review.</span><span data-lang="ca">Desenvolupament full stack (TypeScript, NestJS, React). Mentoring tècnic i code review.</span></p>
-      </li>
-      <li>
-        <div class="tl-header"><span class="tl-role">Lead Developer, Voice &amp; Smart Home</span><span class="tl-company">Wallbox Chargers</span></div>
-        <p class="tl-dates">2021 – 2023</p>
-        <p class="tl-desc"><span data-lang="en" class="active">Technical lead for Alexa, Google Home and SmartThings integrations. Defined roadmap and OKRs. C-level stakeholder demos.</span><span data-lang="es">Liderazgo técnico de integraciones con Alexa, Google Home y SmartThings. Roadmap, OKRs y demos a C-level.</span><span data-lang="ca">Lideratge tècnic d'integracions amb Alexa, Google Home i SmartThings. Roadmap, OKRs i demos a C-level.</span></p>
-      </li>
-      <li>
-        <div class="tl-header"><span class="tl-role">Team Leader</span><span class="tl-company">pEp Security SA</span></div>
-        <p class="tl-dates">2018 – 2020</p>
-        <p class="tl-desc"><span data-lang="en" class="active">Led development of pEp for Thunderbird (email encryption). Architecture, TDD and team management.</span><span data-lang="es">Lideré el desarrollo de pEp for Thunderbird (cifrado de email). Arquitectura, TDD y gestión de equipo.</span><span data-lang="ca">Vaig liderar el desenvolupament de pEp for Thunderbird (xifrat de correu). Arquitectura, TDD i gestió d'equip.</span></p>
-      </li>
-      <li>
-        <div class="tl-header"><span class="tl-role">Lead Developer</span><span class="tl-company">BRANDCRUMB</span></div>
-        <p class="tl-dates">2014 – 2018</p>
-        <p class="tl-desc"><span data-lang="en" class="active">Data ingestion and ML projects. Architecture design, junior mentoring and hiring.</span><span data-lang="es">Proyectos de data ingestion y ML. Arquitectura, mentoring de juniors y hiring.</span><span data-lang="ca">Projectes de data ingestion i ML. Arquitectura, mentoring de juniors i hiring.</span></p>
-      </li>
-      <li>
-        <div class="tl-header"><span class="tl-role">CTO</span><span class="tl-company">Agorique</span></div>
-        <p class="tl-dates">2013 – 2014</p>
-        <p class="tl-desc"><span data-lang="en" class="active">Head of Technology for a B2B fashion marketplace. Led technical and design team.</span><span data-lang="es">Head of Technology en marketplace B2B de moda. Lideré equipo técnico y de diseño.</span><span data-lang="ca">Head of Technology en marketplace B2B de moda. Vaig liderar equip tècnic i de disseny.</span></p>
-      </li>
-    </ul>
-  </section>
-
-
-  <!-- TECH DNA -->
-  <section class="reveal">
-    <p class="section-label"><span data-lang="en" class="active">Tech DNA</span><span data-lang="es">ADN técnico</span><span data-lang="ca">ADN tècnic</span></p>
-    <div class="tech-groups">
-      <div><p class="tech-group-label">Leadership</p><div class="tags"><span class="tag">Team management</span><span class="tag">1:1s & career plans</span><span class="tag">Hiring & budget</span><span class="tag">OKRs</span><span class="tag">Stakeholder mgmt</span><span class="tag">Mentoring</span></div></div>
-      <div><p class="tech-group-label">Backend & infra</p><div class="tags"><span class="tag n">TypeScript</span><span class="tag n">NestJS</span><span class="tag n">Node.js</span><span class="tag n">AWS</span><span class="tag n">Docker</span><span class="tag n">Terraform</span><span class="tag n">Datadog</span></div></div>
-      <div><p class="tech-group-label">Frontend</p><div class="tags"><span class="tag n">React</span><span class="tag n">JavaScript</span><span class="tag n">HTML / CSS</span></div></div>
-      <div><p class="tech-group-label"><span data-lang="en" class="active">Architecture</span><span data-lang="es">Arquitectura</span><span data-lang="ca">Arquitectura</span></p><div class="tags"><span class="tag n">System design</span><span class="tag n">Domain-driven design</span><span class="tag n">Event-driven</span><span class="tag n">Clean architecture</span><span class="tag n">Scalable systems</span></div></div>
-    </div>
-  </section>
-
-  <!-- LET'S TALK -->
-  <section class="reveal">
-    <p class="section-label"><span data-lang="en" class="active">Let's talk</span><span data-lang="es">Hablemos</span><span data-lang="ca">Parlem</span></p>
-    <p class="contact-text"><span data-lang="en" class="active">Always happy to chat about engineering leadership, team building, or new opportunities. Drop me a line.</span><span data-lang="es">Siempre encantado de hablar sobre liderazgo de ingeniería, construcción de equipos o nuevas oportunidades.</span><span data-lang="ca">Sempre content de parlar sobre lideratge d'enginyeria, construcció d'equips o noves oportunitats.</span></p>
-    <div class="contact-links">
-      <a href="mailto:chris.fuertes@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>chris.fuertes@gmail.com</a>
-      <a href="https://www.linkedin.com/in/chrisfuertes" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
-      <a href="https://github.com/kirthar" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GitHub</a>
-    </div>
-  </section>
-
-</div>
-
-<footer><div class="container">© <span id="year"></span> Christian Fuertes</div></footer>
+<footer data-view="end"><div class="wrap">© <span id="year">2026</span> Christian Fuertes
+  <p class="privacy" hidden data-i18n="privacy">Anonymous visit statistics, no cookies, no personal data.</p></div></footer>
 
 <script>
-function detectLang(){const s=localStorage.getItem('lang');if(s)return s;const n=(navigator.language||'en').toLowerCase();if(n.startsWith('ca'))return'ca';if(n.startsWith('es'))return'es';return'en'}
-function setLang(l){localStorage.setItem('lang',l);document.documentElement.lang=l;document.querySelectorAll('[data-lang]').forEach(e=>{e.classList.toggle('active',e.getAttribute('data-lang')===l)});document.querySelectorAll('.lang-bar button').forEach(b=>{b.classList.toggle('active',b.id==='btn-'+l)})}
-setLang(detectLang());
-const bar=document.getElementById('langbar'),heroEl=document.querySelector('.hero');
-window.addEventListener('scroll',()=>{bar.classList.toggle('scrolled',window.scrollY>heroEl.offsetHeight-60)},{passive:true});
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.1});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-document.getElementById('year').textContent=new Date().getFullYear();
+(function(){
+  var root=document.documentElement;
+  root.classList.add('js');
+
+  var T={
+  es:{
+  "title": "Christian Fuertes · Engineering Manager",
+  "desc": "Christian Fuertes es un Engineering Manager con perfil técnico en Barcelona y 14 años en software. Lidera equipos multidisciplinares de hasta 15 personas y sigue cerca del código en frontend, backend y DevOps.",
+  "skip": "Saltar al contenido",
+  "position": "<strong>Engineering Manager</strong> con 14 años en software. Lidero equipos multidisciplinares y sigo trabajando con el código en frontend, backend y DevOps.",
+  "cta_email": "Escríbeme",
+  "cta_cv": "Descargar CV (PDF)",
+  "cta_cv2": "Descargar CV (PDF)",
+  "meta": "Barcelona, trabajo en remoto. 14 años en software, más de 6 años liderando equipos.",
+  "h_lead": "Liderazgo",
+  "lead_lede": "Lidero un equipo multidisciplinar de <mark>hasta 15 personas</mark> entre frontend, backend, infraestructura, datos y producto, con <mark>6 personas a mi cargo</mark>, y sustituyo al Head of Engineering cuando hace falta. He participado en la contratación de unos <mark>10 ingenieros</mark>, con solo 2 salidas y 2 promociones, una de ellas de desarrollador a Engineering Manager.",
+  "lead_p1": "Lidero con el ejemplo. Me siento con el equipo, resuelvo los problemas a su lado y mantengo 1:1s regulares, planes de carrera y feedback honesto, incluidos planes de mejora cuando hacen falta.",
+  "lead_p2": "Soy responsable de la entrega desde la definición del problema hasta la release. Dividir las épicas en unidades de valor más pequeñas redujo el lead time medio de una épica <mark>de 5 días a 2</mark> en un mes, y el tiempo de revisión de PRs ha bajado un 20%, con roadmaps y OKRs que hacen la cadencia predecible.",
+  "h_tech": "Nivel técnico",
+  "tech_lede": "Soy quien toma las decisiones de arquitectura y sigo escribiendo código: backends en NestJS y Java/Spring Boot, frontends en React y Next.js, y dbt y Dagster sobre Redshift. El equipo trabaja con TDD outside-in y mantiene una <mark>cobertura de tests superior al 90%</mark> con <mark>menos de 3 bugs al mes</mark>. En tres años tuvimos <mark>2 incidentes graves</mark> y el crítico lo resolví en <mark>menos de 30 minutos</mark>.",
+  "tech_p1": "Las decisiones pasan por ADRs y RFCs. Los estándares son una Definition of Done y Draft PRs pequeñas con code review y QA obligatorios. Los sistemas son cloud-native en AWS (ECS, Lambda, RDS, S3, CloudFront, API Gateway) con Docker, Terraform y CI/CD, y he reforzado IAM, secretos y WAF.",
+  "tech_p2": "Lideré una migración de datos a una nueva base de datos de servicio y construí el arnés de comprobación de paridad que condicionó el corte a un resultado idéntico.",
+  "tech_p3": "Contribuí al diseño de funcionalidades con LLMs que usan los clientes, como la extracción de documentos y la búsqueda con recuperación aumentada, sobre OpenAI, Anthropic y AWS Bedrock. En el equipo lideré la adopción de Claude Code, con normas claras sobre cuándo no fiarse de ella y revisión humana en cada PR, e impulsé un repositorio compartido de skills de Claude Code al que ya contribuyen ingeniería, QA y datos.",
+  "h_exp": "Experiencia",
+  "y_now": "2023 – Actualidad",
+  "w1": "Barcelona, en remoto. Scale-up B2B de calidad y cumplimiento de proveedores en farma.",
+  "d1": "Lidero un equipo de producto multidisciplinar y dependo del Head of Engineering y del CTO, con responsabilidad sobre la contratación, las decisiones de arquitectura y la entrega.",
+  "w2": "Barcelona. Carga de vehículos eléctricos.",
+  "d2": "Lead developer de las integraciones de asistentes de voz y smart home de un cargador de vehículo eléctrico conectado, sobre backends orientados a eventos en AWS Lambda. Roadmap y OKRs definidos con Producto.",
+  "w3": "Barcelona. Software de seguridad.",
+  "d3": "Team lead y arquitecto principal de una extensión de cifrado de correo para un cliente de email open source muy conocido, creando una cultura de calidad basada en TDD.",
+  "w4": "Barcelona. Plataformas de datos.",
+  "d4": "Pipelines de ingesta de datos en Node.js sobre AWS (Redshift, RDS), además de arquitectura, mentoring y contratación.",
+  "w5": "Barcelona. E-commerce B2B.",
+  "d5": "Head of Technology de una plataforma de venta online B2B con showroom virtual sobre Ruby on Rails y Backbone, liderando el equipo técnico y de diseño.",
+  "w6": "Barcelona. E-commerce B2C.",
+  "d6": "Construí catálogo, checkout, pagos y cupones de una plataforma de ofertas diarias de mucho tráfico y la preparé para los picos de flash sales y campañas de temporada.",
+  "h_skills": "Tecnologías",
+  "dt_lead": "Liderazgo",
+  "dd_lead": "Contratación, 1:1s y planes de carrera, gestión del rendimiento, roadmaps y OKRs, gestión de stakeholders, mentoring",
+  "dt_prac": "Prácticas",
+  "dd_prac": "TDD outside-in, ADRs y RFCs, Definition of Done, code review, postmortems, refinamiento guiado por especificaciones",
+  "dt_dom": "Sectores",
+  "dd_dom": "B2B SaaS en industrias reguladas (farma), e-commerce y pagos, IoT, movilidad eléctrica, plataformas de datos, software de seguridad",
+  "h_edu": "Formación e idiomas",
+  "edu": "Ingeniería Informática, Universitat Politècnica de Catalunya (UPC), 2005 a 2012.",
+  "langs": "Inglés, nivel profesional completo. Castellano y catalán, nativos. Francés, básico.",
+  "h_contact": "Contacto",
+  "contact_p": "El correo es la mejor forma de contactarme. Encantado de hablar de liderazgo de ingeniería y de lo que está construyendo tu equipo.",
+  "privacy": "Estadísticas de visitas anónimas, sin cookies ni datos personales."
+},
+  ca:{
+  "title": "Christian Fuertes · Engineering Manager",
+  "desc": "Christian Fuertes és un Engineering Manager amb perfil tècnic a Barcelona i 14 anys en software. Lidera equips multidisciplinaris de fins a 15 persones i segueix a prop del codi en frontend, backend i DevOps.",
+  "skip": "Salta al contingut",
+  "position": "<strong>Engineering Manager</strong> amb 14 anys en software. Lidero equips multidisciplinaris i segueixo treballant amb el codi en frontend, backend i DevOps.",
+  "cta_email": "Escriu-me",
+  "cta_cv": "Descarrega el CV (PDF)",
+  "cta_cv2": "Descarrega el CV (PDF)",
+  "meta": "Barcelona, treball en remot. 14 anys en software, més de 6 anys liderant equips.",
+  "h_lead": "Lideratge",
+  "lead_lede": "Lidero un equip multidisciplinari de <mark>fins a 15 persones</mark> entre frontend, backend, infraestructura, dades i producte, amb <mark>6 persones a càrrec meu</mark>, i substitueixo el Head of Engineering quan cal. He participat en la contractació d’uns <mark>10 enginyers</mark>, amb només 2 baixes i 2 promocions, una d’elles de desenvolupador a Engineering Manager.",
+  "lead_p1": "Lidero amb l’exemple. Em sec amb l’equip, resolc els problemes al seu costat i mantinc 1:1s regulars, plans de carrera i feedback honest, inclosos plans de millora quan cal.",
+  "lead_p2": "Sóc responsable del lliurament des de la definició del problema fins a la release. Dividir les èpiques en unitats de valor més petites va reduir el lead time mitjà d’una èpica <mark>de 5 dies a 2</mark> en un mes, i el temps de revisió de PRs ha baixat un 20%, amb roadmaps i OKRs que fan la cadència previsible.",
+  "h_tech": "Nivell tècnic",
+  "tech_lede": "Sóc qui pren les decisions d’arquitectura i segueixo escrivint codi: backends en NestJS i Java/Spring Boot, frontends en React i Next.js, i dbt i Dagster sobre Redshift. L’equip treballa amb TDD outside-in i manté una <mark>cobertura de tests superior al 90%</mark> amb <mark>menys de 3 bugs al mes</mark>. En tres anys hem tingut <mark>2 incidents greus</mark> i el crític el vaig resoldre en <mark>menys de 30 minuts</mark>.",
+  "tech_p1": "Les decisions passen per ADRs i RFCs. Els estàndards són una Definition of Done i Draft PRs petites amb code review i QA obligatoris. Els sistemes són cloud-native a AWS (ECS, Lambda, RDS, S3, CloudFront, API Gateway) amb Docker, Terraform i CI/CD, i he reforçat IAM, secrets i WAF.",
+  "tech_p2": "Vaig liderar una migració de dades a una nova base de dades de servei i vaig construir l’arnès de comprovació de paritat que va condicionar el tall a un resultat idèntic.",
+  "tech_p3": "Vaig contribuir al disseny de funcionalitats amb LLMs que fan servir els clients, com l’extracció de documents i la cerca amb recuperació augmentada, sobre OpenAI, Anthropic i AWS Bedrock. A l’equip vaig liderar l’adopció de Claude Code, amb normes clares sobre quan no refiar-se’n i revisió humana a cada PR, i vaig impulsar un repositori compartit de skills de Claude Code al qual ja contribueixen enginyeria, QA i dades.",
+  "h_exp": "Experiència",
+  "y_now": "2023 – Actualitat",
+  "w1": "Barcelona, en remot. Scale-up B2B de qualitat i compliment de proveïdors en farma.",
+  "d1": "Lidero un equip de producte multidisciplinari i responc davant del Head of Engineering i del CTO, amb responsabilitat sobre la contractació, les decisions d’arquitectura i el lliurament.",
+  "w2": "Barcelona. Càrrega de vehicles elèctrics.",
+  "d2": "Lead developer de les integracions d’assistents de veu i smart home d’un carregador de vehicle elèctric connectat, sobre backends orientats a esdeveniments a AWS Lambda. Roadmap i OKRs definits amb Producte.",
+  "w3": "Barcelona. Software de seguretat.",
+  "d3": "Team lead i arquitecte principal d’una extensió de xifratge de correu per a un client d’email open source molt conegut, creant una cultura de qualitat basada en TDD.",
+  "w4": "Barcelona. Plataformes de dades.",
+  "d4": "Pipelines d’ingesta de dades en Node.js sobre AWS (Redshift, RDS), a més d’arquitectura, mentoring i contractació.",
+  "w5": "Barcelona. E-commerce B2B.",
+  "d5": "Head of Technology d’una plataforma de venda online B2B amb showroom virtual sobre Ruby on Rails i Backbone, liderant l’equip tècnic i de disseny.",
+  "w6": "Barcelona. E-commerce B2C.",
+  "d6": "Vaig construir catàleg, checkout, pagaments i cupons d’una plataforma d’ofertes diàries de molt trànsit i la vaig preparar per als pics de flash sales i campanyes de temporada.",
+  "h_skills": "Tecnologies",
+  "dt_lead": "Lideratge",
+  "dd_lead": "Contractació, 1:1s i plans de carrera, gestió del rendiment, roadmaps i OKRs, gestió d’stakeholders, mentoring",
+  "dt_prac": "Pràctiques",
+  "dd_prac": "TDD outside-in, ADRs i RFCs, Definition of Done, code review, postmortems, refinament guiat per especificacions",
+  "dt_dom": "Sectors",
+  "dd_dom": "B2B SaaS en indústries regulades (farma), e-commerce i pagaments, IoT, mobilitat elèctrica, plataformes de dades, software de seguretat",
+  "h_edu": "Formació i idiomes",
+  "edu": "Enginyeria Informàtica, Universitat Politècnica de Catalunya (UPC), 2005 a 2012.",
+  "langs": "Anglès, nivell professional complet. Castellà i català, natius. Francès, bàsic.",
+  "h_contact": "Contacte",
+  "contact_p": "El correu és la millor manera de contactar-me. Content de parlar de lideratge d’enginyeria i del que està construint el teu equip.",
+  "privacy": "Estadístiques de visites anònimes, sense cookies ni dades personals."
+}
+  };
+
+  var nodes=[].slice.call(document.querySelectorAll('[data-i18n]'));
+  var descEl=document.querySelector('meta[name=description]');
+  var en={title:document.title,desc:descEl.getAttribute('content')};
+  nodes.forEach(function(n){en[n.getAttribute('data-i18n')]=n.innerHTML});
+  var btns=[].slice.call(document.querySelectorAll('.lang button'));
+
+  function store(){try{return window.localStorage}catch(e){return null}}
+  function pick(){
+    var m=/[?&]lang=(en|es|ca)\b/.exec(location.search);
+    if(m)return m[1];
+    try{var s=store(),v=s&&s.getItem('lang');if(v==='en'||v==='es'||v==='ca')return v}catch(e){}
+    return 'en';
+  }
+  function stagger(){[].forEach.call(document.querySelectorAll('[data-reveal] mark'),function(m,i){m.style.setProperty('--d',(i*110)+'ms')})}
+  function apply(l,save){
+    var d=l==='en'?en:T[l];
+    nodes.forEach(function(n){var k=n.getAttribute('data-i18n');if(d[k]!==undefined)n.innerHTML=d[k]});
+    document.title=d.title;descEl.setAttribute('content',d.desc);
+    root.lang=l;
+    btns.forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-lang')===l))});
+    stagger();
+    if(save){try{var s=store();s&&s.setItem('lang',l)}catch(e){}if(typeof track==='function')track('lang-'+l)}
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-lang'),true)})});
+  apply(pick(),false);
+
+  var y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();
+
+  var targets=[].slice.call(document.querySelectorAll('[data-reveal]'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('seen');io.unobserve(e.target)}})},{threshold:.35});
+    targets.forEach(function(t){io.observe(t)});
+  }else{targets.forEach(function(t){t.classList.add('seen')})}
+
+  /* Analytics: GoatCounter, no cookies, no personal data. Inert until GC_CODE is set,
+     and only active on chris.cat, never with Do Not Track or Global Privacy Control. */
+  var GC_CODE='chrisfuertes';
+  var host=location.hostname.replace(/^www\./,'');
+  var optOut=navigator.doNotTrack==='1'||window.doNotTrack==='1'||navigator.globalPrivacyControl===true;
+  var live=!!GC_CODE&&host==='chris.cat'&&!optOut;
+  var queue=[],sent={};
+  function send(e){
+    if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count(e);else queue.push(e);
+  }
+  function track(name,once){
+    if(!live)return;
+    if(once){if(sent[name])return;sent[name]=1}
+    send({path:'ev/'+name,title:name,event:true});
+  }
+  if(live){
+    var sc=document.createElement('script');
+    sc.async=true;sc.src='https://gc.zgo.at/count.js';
+    sc.setAttribute('data-goatcounter','https://'+GC_CODE+'.goatcounter.com/count');
+    sc.onload=function(){queue.splice(0).forEach(function(e){window.goatcounter.count(e)})};
+    document.head.appendChild(sc);
+    var note=document.querySelector('.privacy');if(note)note.hidden=false;
+    track('device-'+(window.innerWidth<700?'mobile':'desktop'),true);
+    document.addEventListener('click',function(e){
+      var a=e.target.closest&&e.target.closest('[data-track]');
+      if(a)track(a.getAttribute('data-track'));
+    });
+    if('IntersectionObserver' in window){
+      var vo=new IntersectionObserver(function(es){es.forEach(function(e){
+        if(e.isIntersecting){track('view-'+e.target.getAttribute('data-view'),true);vo.unobserve(e.target)}
+      })},{threshold:.4});
+      [].forEach.call(document.querySelectorAll('[data-view]'),function(t){vo.observe(t)});
+    }
+  }
+})();
 </script>
 </body>
 </html>
