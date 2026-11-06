@@ -424,11 +424,10 @@ footer{font:500 .875rem var(--sans);color:var(--ink-3)}
   }else{targets.forEach(function(t){t.classList.add('seen')})}
 
   /* Analytics: GoatCounter, no cookies, no personal data. Inert until GC_CODE is set,
-     and only active on chris.cat, never with Do Not Track or Global Privacy Control. */
+     and only active on chris.cat. Anonymous and cookieless, so DNT/GPC are not used as opt-outs. */
   var GC_CODE='chrisfuertes';
   var host=location.hostname.replace(/^www\./,'');
-  var optOut=navigator.doNotTrack==='1'||window.doNotTrack==='1'||navigator.globalPrivacyControl===true;
-  var live=!!GC_CODE&&host==='chris.cat'&&!optOut;
+  var live=!!GC_CODE&&host==='chris.cat';
   var queue=[],sent={};
   function send(e){
     if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count(e);else queue.push(e);
